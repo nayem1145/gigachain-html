@@ -1,0 +1,590 @@
+/************ hero section start ***************/ 
+.gg2-hero-content {
+    background-color: $primary-color;
+    padding: 95px 40px;
+    .gg2-hero-btns {
+        gap: 24px;
+        .secondary-btn {
+            background-color: $white-color;
+            &:hover {
+                color: $heading-color;
+            }
+        }
+        .outline-btn {
+            border-color: $white-color;
+            color: $white-color;
+            &:hover {
+                border-color: $white-color;
+                background-color: $white-color;
+                color: $heading-color;
+            }
+        }
+    }
+    @include screen-1400 {
+        padding: 110px 40px;
+    }
+    @include medium-screen {
+        .hero-bg {
+            max-width: 250px;
+        }
+    }
+    @include portrait-phone {
+        .hero-bg {
+            opacity: 0.1;
+        }
+    }
+}
+.gg2-hero-counter {
+    padding: 38px 40px;
+    .counter-single {
+        min-width: 98px;
+        h3 {
+            color: $primary-color;
+        }
+        + .counter-single {
+            position: relative; 
+            &::before {
+                content: ''; 
+                position: absolute; 
+                left: -50px; 
+                top: 50%; 
+                transform: translateY(-50%); 
+                width: 1px; 
+                height: 45px;
+                background: $border-color;
+            }
+        }
+    }
+    @include screen-1400 {
+        .counter-single {
+            + .counter-single {
+                &::before {
+                    left: -20px;
+                }   
+            }
+        }
+    }
+    @include portrait-phone{
+         gap: 20px;
+        .counter-single {
+            + .counter-single {
+                &::before {
+                    display: none;
+                }   
+            }
+        }
+    }
+}
+.gg2-hero-categories {
+    .slick-list {
+        margin: 0 -12px;
+        padding-bottom: 60px;
+        .slick-slide {
+            margin: 0 12px;
+        }
+    }
+}
+.gg2-ct-item {
+    transition: $transition;
+    .icon-wrapper {
+        width: 56px; 
+        height: 56px;
+        box-shadow: $box-shadow;
+    }
+    h6 {
+        font-size: 16px;
+        margin-top: 12px;
+        transition: $transition; 
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+}
+
+
+/************** collection section start ***********/ 
+.gg2-collection-single {
+    transition: $transition;
+    .inner-row {
+        gap: 16px;
+    }
+    .feature-img {
+        img {
+            transition: $transition; 
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .subtitle {
+        font-weight: 500;
+        font-size: 15px;;
+    }
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+}
+.gg2-discover {
+    .form-select {
+        box-shadow: $box-shadow;
+        padding: 13px 30px 13px 24px;
+    }
+    .ds-filter-btn-group {
+        button {
+            &.active {
+                background-color: $secondary-color;
+            }
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }
+    }
+}
+.gg2-dp-card {
+    .dp-card-content {
+        padding: 0 24px 40px 24px;
+        border: 1px solid $border-color;
+        border-top: 0;
+        border-radius: 4px;
+        .time {
+            font-size: 14px;
+            i {
+                margin-right: 4px;
+            }
+        }
+        .icon-wrapper {
+            width: 30px; 
+            height: 30px;
+            background-color: rgba($primary-color, 0.1); 
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            color: $primary-color;
+        }
+        .bid-info {
+            span {
+                font-size: 12px;
+            }
+        }
+        .explore-btn {
+            padding: 12px 24px;
+        }
+    }
+}
+
+/************* call to action start **************/
+.gg2-call-to-action-wrapper {
+    background-color: $primary-color;
+    padding: 10px 40px;
+    .actions-btns {
+        gap: 24px;
+        .button {
+            padding: 14px 32px;
+        }
+        .secondary-btn {
+            background: $white-color;
+            &:hover {
+                color: $heading-color;
+            }
+        }
+        .outline-btn {
+            border-color: $white-color;
+            color: $white-color;
+        }
+    }
+    @include large-screen {
+        padding: 40px 24px 0 24px;
+        .content-left {
+            text-align: center;
+        }
+    }
+}
+
+
+/******************* blog section start **************/
+.gg2-blog-card {
+    padding: 24px 24px 32px;
+    transition: $transition;
+    position: relative;
+    .feature-img {
+        position: relative;
+        overflow: hidden;
+        img {
+            transition: $transition;
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+        .category-btn {
+            position: absolute;
+            left: 0; 
+            bottom: 0; 
+            background: $heading-color;
+            color: $white-color; 
+            padding: 8px 16px;
+            border-radius: 0 3px 0 4px;
+            font-size: 14px;
+        }
+    }
+    h4 {
+        transition: $transition; 
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    .blog-explore-btn {
+        width: 48px; 
+        height: 48px;
+        background: $primary-color;
+        position: absolute;
+        right: 0; 
+        bottom: -22px;
+        opacity: 0; 
+        transition: $transition;
+    }
+    &:hover {
+        box-shadow: $g2-box-shadow;
+        .blog-explore-btn {
+            right: 24px; 
+            opacity: 1;
+            transform: rotate(170deg);
+        }
+    }
+}
+
+/**************** steps area started ****************/ 
+.gg2-steps-area {
+    padding-bottom: 200px;
+}
+.gg2-steps-left {
+    padding-left: 80px;
+    padding-right: 10px;
+    @include large-screen {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.gg2-counter {
+    position: absolute;
+    top: -30px; 
+    left: 0;
+    bottom: auto;
+    box-shadow: $g2-box-shadow;
+    h4 {
+        color: $primary-color;
+    }
+    @include large-screen {
+        top: 16px; 
+        left: 16px;
+    }
+}
+.gg2-steps-right {
+    h2 {
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.gg2-steps-list {
+    li {
+        background-color: $white-color;
+        padding: 24px;
+        border-radius: 6px;
+        transition: $transition;
+        + li {
+            margin-top: 16px;
+        }
+        span {
+            width: 68px; 
+            height: 68px; 
+            flex-shrink: 0;
+            box-shadow: $box-shadow;
+        }
+        &:hover {
+            box-shadow: $g2-box-shadow;
+        }
+    }
+}
+
+/************ live auction start *************/ 
+.gg2-live-auction {
+    overflow: visible;
+    .section-title {
+        margin-top: -110px;
+    }
+}
+.gg2-auction-wrapper {
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+    &::before {
+        content: ''; 
+        position: absolute;
+        left: 50%; 
+        top: -6px; 
+        transform: translateX(-50%);
+        width: 410px;
+        height: 68px;
+        background: $light-bg;
+        clip-path: polygon(0 0, 100% 0%, 90% 100%, 10% 100%);
+        z-index: -1;
+    }
+}
+.gg2-countdown {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+    li {
+        min-width: 48px;
+        height: 48px;
+        background: $secondary-color;
+        display: inline-flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 3px;
+        text-align: center;
+        padding: 1px;
+        .title {
+            font-size: 20px;
+            display: block;
+            color: $white-color;
+            font-weight: 700;
+            line-height: 1.1em;
+        }
+        span {
+            font-size: 12px;
+            display: block;
+            color: $white-color;
+        }
+    }
+}
+
+.gg2-auction-slider {
+    .slick-list {
+        margin: 0 -12px;
+        padding-bottom: 120px;
+        .slick-slide {
+            margin: 0 12px;
+        }
+    }
+    .gg2-dp-card {
+        transition: $transition; 
+        &:hover {
+            box-shadow: $g2-box-shadow;
+        }
+    }
+    .slick-arrow {
+        width: 60px;
+        height: 30px;
+        border-radius: 0;
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+        top: -90px;
+        left: 380px;
+        &.next-arrow {
+            left: auto; 
+            right: 380px;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+    }
+    @include screen-1400 {
+        .slick-arrow {
+            left: 290px;
+            &.next-arrow {
+                right: 290px;
+            }
+        }
+    }
+    @include large-screen {
+        .slick-arrow {
+            left: 200px;
+            &.next-arrow {
+                right: 200px;
+            }
+        }
+    }
+    @include medium-screen {
+        .slick-arrow {
+            left: 70px;
+            &.next-arrow {
+                right: 70px;
+            }
+        }
+    }
+    @include small-screen {
+        .slick-arrow {
+            display: none;
+        }
+    }
+}
+
+/***************** video blog *************/ 
+.vblog-left {
+    .vblog-single {
+        + .vblog-single {
+            margin-top: 24px;
+        }
+    }
+}
+.vblog-single {
+    transition: $transition;
+    .vblog-single-left {
+        max-width: 150px;
+        .video-popup-btn {
+            border: 0;
+            i {
+                background: $primary-color;
+                color: $white-color;
+                transition: $transition;
+            }
+            &:hover {
+                i {
+                    background: $secondary-color;
+                }
+            }
+        }
+    }
+    &:hover {
+        box-shadow: $g2-box-shadow;
+    }
+    @include portrait-phone {
+        .vblog-single-left {
+            max-width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .vblog-single-right {
+            .author-list {
+                position: initial;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+.vblog-single-right {
+    h5 {
+        transition: $transition; 
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    .auction-timing {
+        & > span {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    .timer {
+        gap: 2px;
+        li {
+            font-size: 18px;
+            font-weight: 700;
+            color: $heading-color;
+        }
+    }
+    .author-list {
+        position: absolute;
+        right: 24px;
+        top: 75px;
+        li {
+            cursor: pointer;
+            + li {
+                margin-left: -15px;
+            }
+        }
+    }
+    hr {
+        border: 0;
+        height: 0;
+        border-bottom: 1px solid $border-color;
+    }
+    .dp-card-bottom {
+        .icon-wrapper {
+            width: 32px;
+            height: 32px;
+            background: rgba($primary-color, 0.1);
+            border-radius: 50%;
+            color: $primary-color;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+        .bid-info {
+            span {
+                font-size: 12px;
+                font-weight: 500;
+            }
+            h6 {
+                font-size: 16px;
+            }
+        }
+        .explore-btn {
+            padding: 12px 30px;
+        }
+    }
+}
+.vblog-slider {
+    .slick-list {
+        margin: 0 -12px;
+        padding-bottom: 120px;
+        .slick-slide {
+            margin: 0 12px;
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        right: 0;
+        bottom: 120px;
+        z-index: 1;
+        li {
+            width: 15px; 
+            height: 15px; 
+            border: 1px solid transparent;
+            border-radius: 50%;
+            padding: 3px;
+            button {
+                font-size: 0;
+                padding: 0;
+                border: 0; 
+                border-radius: 50%;
+                width: 100%; 
+                height: 100%; 
+                background: $heading-color;
+                display: block;
+            }
+            &.slick-active {
+                border-color: $primary-color;
+                button {
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+    @include portrait-phone {
+        .slick-dots {
+            display: none;
+        }
+    }
+}
+.vblog-single-slide {
+    .vblog-single-right {
+        box-shadow: $slide-shadow;
+        border-radius: 0 4px 4px 4px;
+        margin-top: -65px;
+        max-width: 480px;
+        .video-popup-btn {
+            width: 60px; 
+            height: 60px;
+            border: 0;
+            color: $white-color;
+            top: -40px; 
+            right: 40px;
+        }
+    }
+}

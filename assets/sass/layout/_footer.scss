@@ -1,0 +1,227 @@
+/* Footer Section */
+.footer-section {
+    background: $heading-color;
+    padding-top: 130px; 
+}
+.gg2-footer-subscrip-wrapper {
+    margin-bottom: 140px;
+    .blur-shape {
+        width: 95%;
+        height: 60px;
+        background: rgba($white-color, 0.1);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0 0 10px 10px;
+        bottom: -20px;
+        z-index: 1;
+    }
+}
+.gg2-footer-subscribe {
+    background: $primary-color;
+    padding: 60px 40px;
+    border-radius: 0 0 6px 6px;
+    z-index: 2;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        width: calc(50% - 100px);
+        height: 100%;
+        background: $secondary-color;
+        z-index: -1;
+    }
+    &::after {
+        content: ''; 
+        position: absolute;
+        width: 200px; 
+        height: calc(100% + 3px);
+        background: $secondary-color;
+        top: -3px;
+        left: calc(50% - 100px);
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }
+    .gg2-newsletter {
+        form {
+            input {
+                border-radius: 4px 0 0 4px;
+                &::placeholder {
+                    color: $placeholder-color;
+                }
+            }
+            button {
+                border-radius: 0 4px 4px 0;
+                font-size: 14px;
+                background: $primary-color;
+            }
+        }
+    }
+    .gg2-footer-socials {
+        .socials-list {
+            gap: 12px;
+            a {
+                width: 50px; 
+                height: 50px;
+                display: inline-flex; 
+                align-items: center;
+                justify-content: center;
+                background: $white-color;
+                border-radius: 50%;
+                color: $paragraph-color;
+                transition: $transition;
+                &:hover {
+                    background: $secondary-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    @include large-screen {
+        &::before {
+            width: 50%;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    @include medium-screen {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+.footer-widget {
+    margin-bottom: 60px;
+    .widget-title {
+        color: $white-color;
+        margin-top: 10px;
+        margin-bottom: 38px;
+    }
+    p {
+        color: rgba(255,255,255,0.7);
+    }
+    .footer-sb-form {
+        position: relative; 
+        input[type="email"] {
+            padding: 18px 60px 18px 16px;
+            background: #3E4663;
+            border: 0;
+            border-radius: 4px;
+            color: $white-color;
+            width: 100%;
+            &::placeholder {
+                color: rgba(255,255,255,0.3);
+            }
+        }
+        button {
+            padding: 12px 25px;
+        }
+    }
+}
+.footer-nav {
+    li {
+        + li {
+            margin-top: 10px;
+        }
+        a {
+            color: rgba(255,255,255,0.8);
+            display: block;
+            transition: $transition; 
+            &:hover {
+                padding-left: 2px; 
+                color: $primary-color;
+            }
+        }
+    }
+}
+.footer-contact-widget {
+    .contact-list {
+        li {
+            + li {
+                margin-top: 15px;
+            }
+            i {
+                color: $white-color;
+                font-size: 18px; 
+            }
+        }
+    }
+}
+.footer-copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 0;
+    margin-top: 60px;
+    p {
+        color: rgba(255,255,255,0.7);
+        a {
+            color: $secondary-color;
+        }
+    }
+}
+.copyright-social {
+    a {
+        width: 33px; 
+        height: 33px; 
+        background: #EFF2F4;
+        display: inline-flex; 
+        justify-content: center; 
+        align-items: center;
+        border-radius: 3px;
+        color: $paragraph-color;
+        transition: $transition; 
+        &:hover {
+            color: $white-color; 
+            background: $primary-color;
+        }
+        + a {
+            margin-left: 4px;
+        }
+    }
+}
+
+/****************** footer section start ****************/
+.gg2-footer-section {
+    background: $footer-bg;
+}
+.apps-btn-group {
+    gap: 24px;
+}
+.app-btn {
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-color;
+    transition: $transition;
+    .icon-wrapper {
+        font-size: 24px;
+    }
+    .app-btn-content {
+        span {
+            display: block;
+            font-size: 10px;
+        }
+        strong {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    &.secondary-btn {
+        background: $secondary-color;
+        &:hover {
+            background: $primary-color;
+            color: $white-color;
+        }
+    }
+    &.primary-btn {
+        background: $primary-color;
+        &:hover {
+            background: $secondary-color;
+            color: $white-color;
+        }
+    }
+}
+.gg2-copyright {
+    margin-top: 60px;
+    padding: 16px 0;
+    border-top: 1px solid rgba($border-color, 0.15);
+}

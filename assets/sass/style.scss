@@ -1,0 +1,72 @@
+/*-------------------------------------------------------------
+Template Name: Gigachain - NFT Markeplace HTML Template
+Template URL: https://themeforst.net/user/codexspeed/portfolio
+Author Name: Codexspeed
+Author URL: https://themeforest.net/user/codexspeed/portfolio
+Version: 1.0
+Description: Gigachain is a NFT Marketplace HTML Template
+Tags: nft, gigachain, nft-marketplace
+Text Domain: gigachain
+-------------------------------------------------------------*/
+/*------------------------------------------------------------- 
+TABLE OF CONTENTS: 
+---------------------------------------------------------------
+>> variable
+>> Theme Default
+>> Mixin
+>> Spacing
+>> theme animation
+>> preloader
+>> header
+>> footer
+>> breadcrumb
+>> home-1
+>> blog
+>> blog-details
+>> explore-marketplace
+>> collectibles
+>> wallets
+>> contact
+>> creator
+>> asuthors profile
+>> my profile
+>> create item
+>> single item
+>> home2 
+>> login 
+>> signup
+
+>> Header 
+>> Footer 
+>> Breadcrumb
+>> Home 1
+--------------------------------------------------------------*/
+
+// Theme
+@import 'theme/variable';
+@import 'theme/theme-default';
+@import 'theme/mixin';
+@import 'theme/spacing';
+@import 'theme/theme-animation';
+@import 'theme/preloader';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/breadcrumb';
+
+// Pages
+@import 'pages/home-1.scss';
+@import 'pages/blog';
+@import 'pages/blog-details';
+@import 'pages/explore-marketplace';
+@import 'pages/collectibles';
+@import 'pages/_wallets';
+@import 'pages/contact';
+@import 'pages/creator';
+@import 'pages/authors-profle';
+@import 'pages/myprofile';
+@import 'pages/create-item';
+@import 'pages/single-item';
+@import 'pages/home-2';
+@import 'pages/login';

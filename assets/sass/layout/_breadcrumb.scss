@@ -1,0 +1,42 @@
+/* Breadcrumb Section */
+.breadcrumb-section {
+    background-size: cover;
+    .circle-1 {
+        left: 20%;
+        top: 60px;
+    }
+    .circle-2 {
+        right: 20%; 
+        bottom: 60px;
+    }
+    .circle-3 {
+        left: 60px; 
+        bottom: 100px;
+    }
+}
+.breadcrumb {
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    li {
+        font-size: 14px;
+        a {
+            color: $paragraph-color;
+            transition: $transition; 
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        + li {
+            margin-left: 24px;
+            position: relative;
+            &::before {
+                content: '\f101';
+                font-family: 'FontAwesome';
+                position: absolute;
+                left: -20px;
+                top: 0;
+            }
+        }
+    }
+}

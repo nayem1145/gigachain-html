@@ -1,0 +1,69 @@
+.myprofile_sidebar {
+    ul {
+        li {
+            a {
+                padding: 12px 24px;
+                display: block;
+                font-weight: 500; 
+                color: $heading-color;
+                transition: $transition; 
+                &:hover {
+                    background-color: $white-color;
+                }
+                &.active {
+                    background-color: $white-color;
+                }
+            }
+            + li {
+                border-top: 1px solid $border-color;
+            }
+        }
+    }
+}
+
+.myprofile_btn_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    button {
+        border: 0; 
+        background: transparent; 
+        color: $heading-color; 
+        font-weight: 600;
+        transition: $transition; 
+        &:hover {
+            color: $primary-color;
+        }
+        &.active {
+            color: $primary-color;
+        }
+    }
+}
+
+.template-pagination {
+    display: flex;
+    align-items: center; 
+    gap: 8px;
+    li {
+        a {
+            width: 35px; 
+            height: 35px; 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center;
+            background: $white-color; 
+            color: $heading-color; 
+            font-weight: 600;
+            transition: $transition; 
+            border-radius: 3px;
+            &:hover {
+                color: $white-color; 
+                background: $primary-color; 
+            }
+            &.active {
+                color: $white-color; 
+                background: $primary-color; 
+            }
+        }
+    }
+}

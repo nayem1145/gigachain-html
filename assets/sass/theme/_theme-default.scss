@@ -1,0 +1,440 @@
+/*************** Typography **************/
+body {
+	margin: 0;
+	color: $paragraph-color;
+	font-family: $template-font;
+    background-color: $light-bg;
+    font-weight: 400;
+}
+
+.display-font {
+    font-size: 64px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $template-font;
+    color: $heading-color;
+    font-weight: 800;
+    line-height: 1.3em;
+}
+
+.h1 {
+    font-size: 42px;
+}
+
+.h2 {
+    font-size: 36px;
+}
+
+.h3 {
+    font-size: 30px;
+}
+
+.h4 {
+    font-size: 24px;
+}
+
+.h5 {
+    font-size: 20px;
+}
+
+.h6 {
+    font-size: 18px;
+}
+
+.h1,.h2,.h3.h4,.h5,.h6 {
+    font-weight: 800; 
+    color: $heading-color;
+}
+
+p {
+	color: $paragraph-color;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+.slick-slide {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    overflow: hidden;
+}
+
+.z-1 {
+    z-index: 1; 
+}
+.z-2 {
+    z-index: 2;
+}
+.z-3 {
+    z-index: 3;
+}
+.z--1 {
+    z-index: -1;
+}
+
+/************ Common CSS Class *********/ 
+.primary-bg {
+    background: $primary-color;
+}
+.light-shadow {
+    box-shadow: $box-shadow;
+}
+
+.bg-light-red {
+    background: $light-red;
+}
+.bg-yellow {
+    background: $yellow;
+}
+.bg-green {
+    background: $green;
+}
+.secondary-bg {
+    background: $secondary-color;
+}
+
+
+/*********** theme buttons *************/ 
+.button {
+    padding: 16px 30px;
+    font-family: $template-font; 
+    font-weight: 600;
+    border-radius: 5px;
+    position: relative;
+    transition: $transition;
+    border: 0;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    &.header-btn {
+        padding: 13px 24px;
+    }
+    &.primary-btn {
+        background: $secondary-color;
+        color: $white-color;
+        overflow: hidden;
+        z-index: 1;
+        &::before {
+            content: ''; 
+            position: absolute; 
+            top: 0;
+            left: 0; 
+            width: calc(50% + 2px); 
+            height: 100%;
+            background: $primary-color;
+            z-index: -1;
+            transition: $transition;
+        }
+        &::after {
+            content: ''; 
+            position: absolute; 
+            top: 0;
+            right: 0; 
+            width: calc(50% + 2px); 
+            height: 100%;
+            background: $primary-color;
+            z-index: -1;
+            transition: $transition;
+        }
+        &:hover {
+            &::before, &::after {
+                width: 0;
+            }
+        }
+        
+    }
+    &.secondary-btn {
+        background: $primary-color;
+        color: $white-color;
+        overflow: hidden;
+        z-index: 1;
+        &::before {
+            content: ''; 
+            position: absolute; 
+            top: 0;
+            left: 0; 
+            width: calc(50% + 10px); 
+            height: 100%;
+            background: $secondary-color;
+            z-index: -1;
+            transition: $transition;
+        }
+        &::after {
+            content: ''; 
+            position: absolute; 
+            top: 0;
+            right: 0; 
+            width: calc(50% + 10px); 
+            height: 100%;
+            background: $secondary-color;
+            z-index: -1;
+            transition: $transition;
+        }
+        &:hover {
+            &::before, &::after {
+                width: 0;
+            }
+        }
+    }
+}
+.primary-btn-shadow {
+    position: relative; 
+    display: inline-block;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        bottom: -5px;
+        left: 50%; 
+        transform: translateX(-50%);
+        width: 95%;
+        height: 20px;
+        background: $primary-color;
+        border-radius: 20px;
+        opacity: 60%;
+        filter: blur(20px);
+        transition: $transition;
+    }
+    &:hover {
+        &::before {
+            background: $secondary-color;
+        }
+    }
+}
+
+.app-download-btn {
+    color: $white-color;
+    padding: 8px 25px;
+    transition: $transition;
+    & > span {
+        font-size: 24px;
+    }
+    .apps-btn-content {
+        span {
+            display: block;
+            font-size: 10px;
+            &:last-child {
+                font-size: 14px;
+            }
+        }
+    }
+    &.google-btn {
+        background: $secondary-color; 
+        &:hover {
+            background: $heading-color;
+            color: $white-color;
+        }
+    }
+    &.apple-btn {
+        background: $heading-color; 
+        &:hover {
+            background: $secondary-color; 
+            color: $white-color;
+        }
+    }
+}
+
+.outline-btn {
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    &:hover {
+        background: $secondary-color;
+        color: $white-color;
+    }
+}
+
+.outline-btn-2 {
+    border: 1px solid $spacer-color;
+    color: $paragraph-color;
+    font-family: $template-font;
+    font-weight: 600;
+    &:hover {
+        background: $primary-color; 
+        border-color: $primary-color;
+        color: $white-color;
+    }
+}
+
+.explore-btn {
+    border: 1px solid $border-color;
+    font-size: 14px; 
+    padding: 12px 24px;
+    color: $paragraph-color;
+    border-radius: 4px;
+    &:hover {
+        background: $primary-color; 
+        color: $white-color;
+        border-color: $primary-color;
+    }
+}
+
+.btn-small {
+    padding: 12px 20px;
+    font-size: 14px;
+}
+
+//common shapes
+.primary-circle-dot {
+    width: 22px; 
+    height: 22px; 
+    background: $primary-color; 
+    border-radius: 50%;
+    display: inline-block;
+}
+.secondary-circle-dot {
+    width: 10px; 
+    height: 10px; 
+    background: $secondary-color;
+    border-radius: 50%;
+}
+
+.theme-pagination {
+    ul {
+        display: block;
+        text-align: center;
+        li {
+            display: inline-block;
+            &:first-child {
+                float: left;
+            }
+            &:last-child {
+                float: right;
+            }
+            a {
+                color: $paragraph-color;
+                font-weight: 600;
+                padding: 3px 8px;
+                transition: $transition;
+                border-radius: 4px; 
+                &:hover {
+                    background: $primary-color;
+                    color: $white-color;
+                }
+                &.active {
+                    background: $primary-color; 
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+
+.input-padding {
+    padding: 16px 32px;
+}
+
+.theme-load-more-btn {
+    width: 480px; 
+    padding: 14px 25px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: $transition;
+    span {
+        transition: $transition;
+        display: inline-block;
+    }
+    &:hover {
+        color: $primary-color;
+        span {
+            transform: rotate(90deg);
+        }
+    }
+
+}
+
+/******* theme input ********/ 
+input, .form-select, textarea {
+    padding: 15px 16px;
+    width: 100%;
+    border: 1px solid $light-border;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: 0;
+    &::placeholder {
+        color: $light-border;
+    }
+}
+
+//scroll top button 
+.scroll-top-btn {
+    width: 40px; 
+    height: 40px; 
+    position: fixed; 
+    right: 60px; 
+    bottom: 60px; 
+    z-index: 150;
+    background: $primary-color;
+    color: $white-color;
+    border-radius: 4px;
+    display: none;
+}
+
+
+.h2-light-bg {
+    background-color: $light-bg-2;
+}
+
+.dark-btn {
+    background: $heading-color;
+    color: white; 
+    transition: $transition; 
+    &:hover {
+        background: $primary-color;
+        color: $white-color;
+    }
+}

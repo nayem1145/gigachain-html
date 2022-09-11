@@ -1,0 +1,100 @@
+.create-item-form-wrapper {
+    .top-content {
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+.create_item_form {
+    .file_upload {
+        border: 2px dashed $border-color;
+        padding: 40px 24px;
+        background: $white-color;
+        i {
+            font-size: 24px;
+        }
+        p {
+            font-weight: 500;
+            span {
+                color: $secondary-color;
+            }
+        }
+        button {
+            background: transparent; 
+            border: 1px solid $primary-color;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px; 
+            font-weight: 600;
+            transition: $transition;
+        }
+        input[type="file"] {
+            &:hover {
+                cursor: pointer;
+                & ~ button {
+                    background: $primary-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .input-field {
+        .estimated-text {
+            font-size: 12px;
+            margin-top: 12px; 
+            display: block;
+            input[type="checkbox"] {
+                width: auto;
+            }
+        }
+    }
+    .radio-field {
+        margin-bottom: 24px;
+        .radio-single {
+            display: inline-block;
+            position: relative;
+            margin-right: 16px;
+            margin-bottom: 15px;
+            input {
+                position: absolute;
+                left: 0; 
+                top: 0; 
+                width: 100%; 
+                height: 100%;
+                opacity: 0;
+                &:checked {
+                    ~ button {
+                        background: $secondary-color;
+                        color: $white-color;
+                    }
+                }
+            }
+            button {
+                padding: 15px 35px;
+                border: 1px solid $border-color;
+                border-radius: 4px;
+                background: transparent;
+                font-size: 14px;
+                font-weight: 600;
+                transition: $transition;
+            }
+        }
+    }
+    .input-box {
+        .form-select {
+            width: 90px;
+        }
+    }
+    .form-btns {
+        gap: 24px;
+        .white-btn {
+            background: $white-color;
+            box-shadow: $item-shadow;
+            &:hover {
+                background: $secondary-color;
+                color: $white-color;
+            }
+        }
+    }
+}

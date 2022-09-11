@@ -1,0 +1,32 @@
+/********* wallet section *********/ 
+.wallet-single {
+    display: block;
+    padding: 40px 25px;
+    transition: $transition;
+    border: 1px solid $border-color;
+    overflow: hidden;
+    .popular-badge {
+        right: -40px; 
+        top: 25px;
+        background: $light-red;
+        color: $white-color;
+        padding: 3px 35px;
+        font-size: 13px;
+        font-weight: 700;
+        transform: rotate(45deg);
+    }
+    h6 {
+        transition: $transition; 
+    }
+    p {
+        font-size: 14px;
+    }
+    &:hover {
+        background: $white-color;
+        box-shadow: $box-shadow;
+        border-color: $white-color;
+        h6 {
+            color: $secondary-color;
+        }
+    }
+}

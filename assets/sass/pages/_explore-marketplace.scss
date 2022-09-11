@@ -1,0 +1,244 @@
+/*********** explore sidebar widgets *********/ 
+.explore-widget {
+    .widget-title {
+        color: $heading-color; 
+        font-weight: 700;
+    }
+    .accordion {
+        .accordion-header {
+            a {
+                background-color: $white-color;
+                box-shadow: none;
+                &::after {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                }
+            }
+        }
+        .accordion-body {
+            border: 1px solid $light-border;
+            padding: 24px 16px;
+            background: $light-bg;
+            .status-radio-group {
+                gap: 16px;
+                justify-content: center;
+                label {
+                    background: $white-color;
+                    box-shadow: $item-shadow;
+                    padding: 10px 15px;
+                    font-weight: 500;
+                    font-size: 15px;
+                    position: relative;
+                    input[type="radio"] {
+                        position: absolute; 
+                        width: 100%; 
+                        height: 100%;
+                        left: 0; 
+                        top: 0;
+                        z-index: 2;
+                        opacity: 0;
+                        &:checked {
+                            & ~ span {
+                                &::before {
+                                    background: $primary-color;
+                                    border-color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                    span {
+                        position: relative; 
+                        &::before {
+                            content: ''; 
+                            position: absolute; 
+                            z-index: 1;
+                            width: 12px; 
+                            height: 12px; 
+                            border: 1px solid $paragraph-color;
+                            border-radius: 50%;
+                            top: 4px;
+                            left: -16px;
+                            transition: $transition;
+                        }
+                    }
+                }
+            }
+            .currency-title {
+                background: $white-color;
+                padding: 12px 18px;
+                border-radius: 4px; 
+                box-shadow: $item-shadow;
+                font-size: 15px;
+                font-weight: 500;
+                span {
+                    border: 1px solid $paragraph-color;
+                    width: 25px; 
+                    height: 25px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                }
+            }
+            .pricing-range-box {
+                input {
+                    width: 50%;
+                    padding: 14px 25px;
+                }
+                span {
+                    margin: 0 15px;
+                    font-weight: 700;
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+}
+.explore-search-widget {
+    padding: 16px; 
+    border: 1px solid $light-border;
+    border-radius: 4px;
+    form {
+        border: 1px solid $light-border;
+        border-radius: 4px;
+        input[type="email"] {
+            padding: 14px 20px;
+            font-size: 15px;
+        }
+    }
+    .button {
+        width: 42px; 
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border-radius: 6px;
+        top: 50%; 
+        transform: translateY(-50%);
+        right: 7px;
+    }
+}
+.explore-price-widget {
+    .primary-btn {
+        padding: 12px 40px;
+    }
+}
+
+.filter-input {
+    span {
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    input {
+        padding: 16px 32px 16px 45px;
+    }
+}
+.filter-list-wrapper {
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-right: 20px;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $white-color;
+        border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($paragraph-color, 0.2);
+        border-radius: 6px;
+    }
+    li {
+        background: $white-color; 
+        padding: 12px 16px;
+        border-radius: 4px;
+        position: relative;
+        input {
+            position: absolute;
+            left: 0; 
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            &:checked {
+                & ~ .custom-check-mark {
+                    background-color: $primary-color; 
+                    border-color: $primary-color;
+                }
+            }
+        }
+        .custom-check-mark {
+            right: 15px; 
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px; 
+            height: 15px; 
+            border-radius: 50%;
+            border: 1px solid $paragraph-color; 
+        }
+        + li {
+            margin-top: 10px;
+        }
+        p {
+            font-weight: 500;
+            font-size: 15px;
+        }
+    }
+}
+
+.explore-categories-list {
+    max-height: 100%;
+    li {
+        .icon-wrapper {
+            width: 30px;
+            height: 30px; 
+            background: $light-icon-bg; 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 15px;
+        }
+    }
+}
+
+.explore-colors-widget {
+    .filter-list-wrapper {
+        max-height: 100%;
+        padding-right: 0;
+        overflow: hidden;
+        li {
+            .color-circle {
+                width: 15px; 
+                height: 15px; 
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.explore-content-tab {
+    padding: 16px 22px;
+}
+.explore-filter-btn-group {
+    button {
+        padding: 14px 25px;
+        border: 0; 
+        background: transparent;
+        font-size: 14px;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: $transition;
+        &.active {
+            background: $white-color;
+            box-shadow: $box-shadow;
+        }
+    }
+}
+.explore-form-select {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 25px;
+    padding-right: 50px;
+}

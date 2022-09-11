@@ -1,0 +1,200 @@
+/*********** single item *********/ 
+.single-item-left {
+    padding-right: 16px;
+}
+.single-product-box {
+    padding: 40px;
+    .single-product-btns {
+        padding: 40px 24px;
+        border: 1px dashed $border-color;
+        border-radius: 4px;
+        gap: 24px;
+        .button {
+            min-width: 222px;
+            text-align: center;
+        }
+        .outline-btn {
+            border: 1px solid $border-color;
+            color: $heading-color;
+            &:hover {
+                color: $white-color;
+            }
+        }
+    }
+}
+.single-item-slider {
+    .slick-list {
+        margin: 0 -12px;
+        .slick-slide {
+            margin: 0 12px;
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        right: 20px; 
+        bottom: 20px;
+        li {
+            display: inline-block;
+            margin-left: 6px;
+            button {
+                width: 12px; 
+                height: 12px; 
+                font-size: 0;
+                border: 0; 
+                background: $white-color;
+                border-radius: 50%;
+                transition: $transition;
+            }
+            &.slick-active {
+                button {
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+/************* items slider ***********/ 
+.ct_items_slider {
+    .slick-list {
+        margin: 0 -12px;
+        .slick-slide {
+            margin: 0 12px;
+        }
+    }
+    .slick-arrow {
+        right: 0; 
+        top: -80px;
+        width: 40px;
+        height: 40px;
+        &.prev-btn {
+            right: 55px;
+        }
+        @include small-screen {
+            display: none !important;
+        }
+    }
+}
+
+.single-item-right {
+    .btn-meta {
+        padding: 6px 12px;
+        border: 1px solid $border-color;
+        font-size: 14px;
+        border-radius: 3px;
+        i {
+            margin-right: 4px;
+        }
+    }
+    .dropdown-btn {
+        padding: 3px 18px;
+        border-radius: 3px;
+    }
+    .item-meta {
+        span {
+            font-size: 14px; 
+            font-weight: 500;
+            + span {
+                margin-left: 32px;
+                position: relative; 
+                &::before {
+                    content: ''; 
+                    position: absolute; 
+                    left: -16px; 
+                    top: 50%; 
+                    transform: translateY(-50%);
+                    width: 1px; 
+                    height: 16px; 
+                    background: $border-color;
+                }
+            }
+        }
+    }
+    .collection-box-wrapper {
+        gap: 24px;
+    }
+    .collection-box {
+        border: 1px dashed $border-color;
+        width: 50%;
+        span {
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+        }
+    }
+    .pricing-box {
+        span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    .auction-downcount {
+        span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            li {
+                background: $secondary-color;
+                padding: 13px 12px;
+                color: $white-color; 
+                border-radius: 4px;
+                min-width: 50px;
+                text-align: center;
+            }
+        }
+    }
+    .item-tabs {
+        ul {
+            gap: 40px;
+            padding-bottom: 4px;
+            li {
+                a {
+                    color: $heading-color; 
+                    font-weight: 600;
+                    transition: $transition; 
+                    border-bottom: 2px solid transparent;
+                    padding: 4px 0;
+                    &.active {
+                        color: $primary-color; 
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .pp-box {
+        .subtitle {
+            font-weight: 600; 
+        }
+        .user-name {
+            color: $heading-color;
+            font-weight: 700;
+        }
+        .meta-text {
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+    .gg_item_list {
+        li {
+            + li {
+                margin-top: 10px;
+                position: relative; 
+                &::before {
+                    content: ''; 
+                    position: absolute; 
+                    left: 0; 
+                    top: -5px; 
+                    width: 100%; 
+                    height: 1px;
+                    background: rgba($border-color, 0.5);
+                }
+            }
+        }
+    }
+}

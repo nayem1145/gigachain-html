@@ -1,0 +1,336 @@
+/************** authors profile ***************/ 
+.authors-profile-info {
+    padding: 40px 16px;
+    .profile_following {
+        span {
+            + span {
+                margin-left: 40px;
+                position: relative; 
+                &::before {
+                    content: ''; 
+                    position: absolute;
+                    left: -20px;
+                    top: 50%; 
+                    transform: translateY(-50%);
+                    width: 1px; 
+                    height: 20px;
+                    background: $border-color;
+                }
+            }
+        }
+        @include desktop {
+            span {
+                + span {
+                    margin-left: 20px;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .profile_connect {
+        gap: 16px;
+        a {
+            padding: 10px 15px;
+            font-size: 14px;
+            &.outline-btn {
+                border-color: $border-color;
+                color: $heading-color;
+                &:hover {
+                    background: $primary-color; 
+                    border-color: $primary-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .short_bio {
+        a {
+            color: $primary-color;
+            font-weight: 500;
+            transition: $transition; 
+            text-decoration: underline;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+    .profile_social {
+        a {
+            width: 30px;
+            height: 30px;
+            background: rgba($placeholder-color, 0.5);
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 3px;
+            margin-right: 4px;
+            color: $heading-color;
+            transition: $transition; 
+            &:hover {
+                background: $secondary-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+.profile-id {
+    .joined_date {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .author_user_id {
+        font-weight: 600;
+        color: $heading-color;
+    }
+    .copy_to_clip_board {
+        cursor: pointer;
+        i {
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $paragraph-color; 
+            color: transparent;
+        }
+    }
+}
+.authors_profile_tab {
+   padding: 15px 20px; 
+   box-shadow: $item-shadow;
+}
+.profile_tab_btns {
+    li {
+        a {
+            padding: 14px 25px;
+            font-size: 14px;
+            border: 0; 
+            border-radius: 4px;
+            font-weight: 600;
+            background: transparent;
+            color: $paragraph-color;
+            transition: $transition;
+            &.active {
+                background: $primary-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+.profile_tab_short_area {
+    span {
+        font-weight: 600; 
+        color: $heading-color; 
+        font-size: 15px;
+        flex-shrink: 0;
+        display: inline-block;
+    }
+    .form-select {
+        padding: 12px 15px;
+        margin-left: 10px;
+        min-width: 185px;
+    }
+}
+
+/****************** authors profile style 2 *************/ 
+.authors_profile {
+    margin-top: -50px;
+}
+.authors_profile_info {
+    padding: 32px;
+    box-shadow: $item-shadow;
+    .profile_btns {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        a.share-btn {
+            width: 35px;
+            height: 35px; 
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
+            background: rgba($placeholder-color, 0.4);
+            border-radius: 3px;
+            color: $heading-color;
+            transition: $transition; 
+            + a {
+                margin-left: 4px;
+            }
+            &:hover {
+                color: $white-color; 
+                background: $primary-color;
+            }
+        }
+        .dropdown-menu {
+            li {
+                + li {
+                    border-top: 1px solid $border-color;
+                }
+                a {
+                    color: $paragraph-color; 
+                    transition: $transition; 
+                    padding: 6px 10px;
+                    display: block;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .profile_content {
+        .profile_title {
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+    .short_bio {
+        max-width: 670px;
+    }
+    .profile_following {
+        gap: 24px;
+        .followers_info {
+            gap: 40px;
+            span {
+                font-size: 14px;
+            }
+            div {
+                + div {
+                    position: relative;
+                    &::before {
+                        content: ''; 
+                        position: absolute; 
+                        left: -20px;
+                        top: 50%; 
+                        transform: translateY(-50%); 
+                        width: 1px; 
+                        height: 25px;
+                        background: $border-color;
+                    }
+                }
+            }
+        }
+        .button {
+            padding: 10px 25px;
+            font-size: 14px; 
+        }
+    }
+}
+
+.authors_profile_tab_content {
+    .nav-tabs {
+        gap: 45px;
+        padding-bottom: 3px;
+        li {
+            a {
+                font-size: 14px; 
+                font-weight: 700; 
+                color: $heading-color;
+                transition: $transition;
+                position: relative; 
+                &::before {
+                    content: ''; 
+                    position: absolute; 
+                    left: 0; 
+                    bottom: -6px; 
+                    width: 100%; 
+                    height: 2px; 
+                    background: $primary-color; 
+                    opacity: 0; 
+                    transition: $transition;
+                }
+                &:hover {
+                    color: $primary-color;
+                }
+                &.active {
+                    color: $primary-color;
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        @include small-screen {
+            gap: 30px;
+            justify-content: center;
+        }
+        @include portrait-phone {
+            gap: 16px;
+        }
+    }
+}
+.select_sort_top {
+    .select_filter {
+        width: 75%;
+    }
+    @include large-screen {
+        .select_filter {
+            width: 100%;
+            justify-content: center;
+        }
+        .shorting_area {
+            justify-content: center;
+        }
+    }
+}
+.select_filter {
+    gap: 24px;
+    select {
+        max-width: 170px;
+        padding: 12px 16px;
+        background-color: transparent;
+        flex-shrink: 0;
+    }
+}
+.select_sort_top {
+    .shorting_area {
+        gap: 15px;
+        label {
+            flex-shrink: 0;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .form-select {
+            flex-shrink: 0;
+            max-width: 170px;
+            padding: 12px 16px;
+            background-color: transparent;
+        }
+    }
+    @include large-screen {
+        .shorting_area {
+            width: 100%;
+            margin-top: 24px;
+        }
+    }
+}
+
+.activity-table {
+    thead {
+        border-bottom: 0;
+        tr {
+            border-bottom: 0;
+        }
+    }
+    tbody {
+        border-top: 2px solid $border-color !important;
+    }
+    .item-info {
+        min-width: 300px;
+    }
+    .price-amount {
+        min-width: 80px;
+    }
+    .quantity {
+        min-width: 100px;
+    }
+    .seller {
+        min-width: 100px;
+    }
+    .buyer {
+        min-width: 100px;
+    }
+    .time {
+        min-width: 120px;
+    }
+}
